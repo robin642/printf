@@ -84,7 +84,7 @@ int print_non_printable(va_list types, char buffer[], int flags, int width, int 
 		w++;
 	}
 
-	buffer[i + offset] = '\0';
+	buffer[w + offset] = '\0';
 
 	return (write(1, buffer, w + offset));
 }

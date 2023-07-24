@@ -18,15 +18,15 @@ int print_unsigned(va_list types, char buffer[], int flags, int width, int preci
 
 	number = convert_size_unsgnd(number, size);
 
-	if (num == 0)
+	if (number == 0)
 		buffer[w--] = '0';
 
 	buffer[BUFF_SIZE - 1] = '\0';
 
-	while (num > 0)
+	while (number > 0)
 	{
-		buffer[w--] = (num % 10) + '0';
-		num /= 10;
+		buffer[w--] = (number % 10) + '0';
+		number /= 10;
 	}
 
 	w++;
@@ -49,7 +49,7 @@ int print_octal(va_list types, char buffer[], int flags, int width, int precisio
 
 	int w = BUFF_SIZE - 2;
 	unsigned long int number = va_arg(types, unsigned long int);
-	unsigned long int init_number = num;
+	unsigned long int init_number = number;
 
 	UNUSED(width);
 
