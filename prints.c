@@ -25,20 +25,20 @@
                 switch (*format)
                 {
                 case 'c':
-                     printf("%s%c", va_arg(list, int));
+                     putchar("%s%c", va_arg(list, int));
                      amount++;
                     break;
                 case 'i':
-                     printf("%s%d", va_arg(list, int));
+                     putchar("%s%d", va_arg(list, int));
                      amount++;
                     break;
                 case 'f':
-                     printf("%s%f", va_arg(list, double));
+                     putchar("%s%f", va_arg(list, double));
                      amount++;
                     break;
                 case 's':
                     *length = va_arg(list, int);
-                    printf("%s%s", length);
+                    putchar("%s%s", length);
                     amount++;
                     break;
                 
